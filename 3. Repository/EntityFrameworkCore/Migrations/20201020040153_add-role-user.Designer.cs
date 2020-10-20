@@ -3,15 +3,17 @@ using System;
 using EntityFrameworkCore.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace EntityFrameworkCore.Migrations
 {
     [DbContext(typeof(ReactDbContext))]
-    partial class ReactDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201020040153_add-role-user")]
+    partial class addroleuser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

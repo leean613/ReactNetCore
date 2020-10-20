@@ -1,17 +1,12 @@
-﻿using Entities.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities.React
+namespace DTOs.React
 {
-    public class User : IEntity
+    public class UserDto
     {
         public Guid Id { get; set; }
-
-        public DateTime CreateDate { get; set; }
-
-        public DateTime UpdateDate { get; set; }
 
         public string UserName { get; set; }
 

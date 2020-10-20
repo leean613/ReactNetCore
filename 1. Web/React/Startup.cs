@@ -1,3 +1,4 @@
+using Infrastructure.ContainerConfigs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -5,6 +6,11 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
+using Newtonsoft.Json.Converters;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace React
 {
@@ -20,14 +26,49 @@ namespace React
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            CoreServicesInstaller.ConfigureCoreServices(services, Configuration);
+            AuthServicesInstaller.ConfigureServicesAuth(services, Configuration);
+            ApplicationServicesInstaller.ConfigureApplicationServices(services, Configuration);
 
-            services.AddControllersWithViews();
+            services
+                .AddControllersWithViews()
+                .AddNewtonsoftJson(options =>
+                    options.SerializerSettings.Converters.Add(new StringEnumConverter()));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            services.AddSwaggerGen(
+                c =>
+                {
+                    c.SwaggerDoc(
+                        "v5",
+                        new OpenApiInfo
+                        {
+                            Title = "Glotech React API",
+                            Version = "v5",
+                            Description = "ASP.NET Core Web API 2",
+                            Contact = new OpenApiContact
+                            {
+                                Name = "Nguyen Dinh Binh",
+                                Email = "ndbinh280697@gmail.com",
+                                Url = new Uri("ndbinh280697@gmail.com")
+                            },
+                            License = new OpenApiLicense
+                            {
+                                Name = "Copyright by Binh Nguyen",
+                                Url = new Uri("")
+                            }
+                        });
+
+                    c.OrderActionsBy((apiDesc) => $"{apiDesc.ActionDescriptor.RouteValues["controller"]}_{apiDesc.HttpMethod}");
+                    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                    c.IncludeXmlComments(xmlPath);
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,18 +85,32 @@ namespace React
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseCors(
+            //    builder => builder
+            //        .AllowAnyOrigin()
+            //        .AllowAnyHeader()
+            //        .AllowAnyMethod()
+            //        .WithExposedHeaders("Content-Disposition"));
+
+            app.UseAuthentication();
+
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-
-            app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller}/{action=Index}/{id?}");
+                c.DocumentTitle = "Glotech React Document";
+                c.SwaggerEndpoint("/swagger/v5/swagger.json", "My API V5");
             });
+            //app.UseRouting();
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller}/{action=Index}/{id?}");
+            //});
 
             app.UseSpa(spa =>
             {

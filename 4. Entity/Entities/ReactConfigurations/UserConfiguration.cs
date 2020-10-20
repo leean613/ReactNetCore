@@ -15,6 +15,7 @@ namespace Entities.ReactConfigurations
             builder.HasKey(x => x.Id);
             builder.Property(x => x.UserName).IsRequired(true);
             builder.Property(x => x.Password).IsRequired(true);
+            builder.Property(x => x.Role).IsRequired(true);
         }
     }
 }
