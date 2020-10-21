@@ -6,7 +6,7 @@ namespace DTOs.React
 {
     public class JwtTokenResultDto
     {
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
         public string TokenType { get; set; }
 

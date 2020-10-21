@@ -7,8 +7,9 @@ using Infrastructure.Filters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Linq;
 using System.Threading.Tasks;
+using Swashbuckle.AspNetCore.Annotations;
+using Microsoft.AspNetCore.Http;
 
 namespace React.Controllers
 {
@@ -26,9 +27,13 @@ namespace React.Controllers
             _loginService = loginService;
         }
 
+        /// <summary>
+        /// Đăng nhập
+        /// </summary>
         [HttpPost("login")]
         [AllowAnonymous]
         [ModelValidationFilter]
+        //[SwaggerResponse(StatusCodes.Status200OK, "Login success!", typeof(JwtTokenResultDto))]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {
             var loginResult = await _loginService.LoginAsync(dto);

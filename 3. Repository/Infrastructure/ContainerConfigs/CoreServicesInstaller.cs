@@ -1,9 +1,11 @@
 ﻿using EntityFrameworkCore.Contexts;
 using EntityFrameworkCore.UnitOfWork;
+using FluentValidation.AspNetCore;
 using Infrastructure.Filters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using IValidator = DTOs.Validators.IValidator;
 
 namespace Infrastructure.ContainerConfigs
 {
@@ -11,15 +13,18 @@ namespace Infrastructure.ContainerConfigs
     {
         public static void ConfigureCoreServices(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<GlotechDbContext>(
+            services.AddMvcCore()
+                .AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining(typeof(IValidator)));
+
+            services.AddDbContext<ReactDbContext>(
                 option =>
                 {
                     option.UseNpgsql(configuration.GetConnectionString("ReactConnectionString"));
                 });
 
-            services.AddScoped<IUnitOfWork, UnitOfWork<GlotechDbContext>>();
-            services.AddScoped<IUnitOfWork<GlotechDbContext>, UnitOfWork<GlotechDbContext>>();
-            services.AddScoped<IRepositoryFactory, UnitOfWork<GlotechDbContext>>();
+            services.AddScoped<IUnitOfWork, UnitOfWork<ReactDbContext>>();
+            services.AddScoped<IUnitOfWork<ReactDbContext>, UnitOfWork<ReactDbContext>>();
+            services.AddScoped<IRepositoryFactory, UnitOfWork<ReactDbContext>>();
 
             services.AddScoped<ModelValidationFilterAttribute>();
             services.AddMemoryCache();

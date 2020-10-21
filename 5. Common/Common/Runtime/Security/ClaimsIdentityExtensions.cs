@@ -10,7 +10,7 @@ namespace Common.Runtime.Security
 {
     public static class ClaimsIdentityExtensions
     {
-        public static int GetUserId(this IIdentity identity)
+        public static Guid GetUserId(this IIdentity identity)
         {
             if(identity == null)
             {
@@ -23,8 +23,8 @@ namespace Common.Runtime.Security
                 throw new AuthenticationException();
             }
 
-            int userId;
-            if (!int.TryParse(userIdClaim.Value, out userId))
+            Guid userId;
+            if (!Guid.TryParse(userIdClaim.Value, out userId))
             {
                 throw new AuthenticationException();
             }

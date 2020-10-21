@@ -10,9 +10,14 @@
     <UserSecretsId>d6110a7f-526d-40b8-b39d-67406d29b714</UserSecretsId>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>E:\Glotech\ReactNetCore\1. Web\React\bin\Debug\netcoreapp3.1\React.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.8" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="5.6.3" />
   </ItemGroup>
 

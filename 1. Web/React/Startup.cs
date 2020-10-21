@@ -50,17 +50,15 @@ namespace React
                         {
                             Title = "Glotech React API",
                             Version = "v5",
-                            Description = "ASP.NET Core Web API 2",
+                            Description = "ASP.NET Core Web API",
                             Contact = new OpenApiContact
                             {
                                 Name = "Nguyen Dinh Binh",
                                 Email = "ndbinh280697@gmail.com",
-                                Url = new Uri("ndbinh280697@gmail.com")
                             },
                             License = new OpenApiLicense
                             {
                                 Name = "Copyright by Binh Nguyen",
-                                Url = new Uri("")
                             }
                         });
 
@@ -85,16 +83,8 @@ namespace React
                 app.UseHsts();
             }
 
-            //app.UseCors(
-            //    builder => builder
-            //        .AllowAnyOrigin()
-            //        .AllowAnyHeader()
-            //        .AllowAnyMethod()
-            //        .WithExposedHeaders("Content-Disposition"));
-
             app.UseAuthentication();
 
-            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
             app.UseSwagger();
@@ -103,14 +93,15 @@ namespace React
                 c.DocumentTitle = "Glotech React Document";
                 c.SwaggerEndpoint("/swagger/v5/swagger.json", "My API V5");
             });
-            //app.UseRouting();
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //        name: "default",
-            //        pattern: "{controller}/{action=Index}/{id?}");
-            //});
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
 
             app.UseSpa(spa =>
             {
