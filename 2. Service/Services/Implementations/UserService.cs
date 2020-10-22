@@ -1,4 +1,5 @@
 ﻿using Abstractions.Interfaces;
+using AutoMapper;
 using Common.Exceptions;
 using DTOs.React;
 using Entities.React;
@@ -13,12 +14,14 @@ namespace Services.Implementations
     public class UserService : IUserService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
         private IRepository<User> _userRepository => _unitOfWork.GetRepository<User>();
 
-        public UserService(IUnitOfWork unitOfWork)
+        public UserService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public async Task<UserDto> CreateUserAsync(CreateUserDto dto)
@@ -44,7 +47,7 @@ namespace Services.Implementations
 
             if (existUser != null)
             {
-                throw new DuplicateUserNameException("Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!");
+                throw new BusinessException("Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!");
             }
         }
 
@@ -54,7 +57,7 @@ namespace Services.Implementations
                 .GetAll()
                 .FirstOrDefaultAsync(x => x.Id == userId);
 
-            return userFromDb.ToUserDto();
+            return _mapper.Map<UserDto>(userFromDb);
         }
     }
 }

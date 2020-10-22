@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\4. Entity\Entities\Entities.csproj" />
+    <ProjectReference Include="..\..\4. Entity\Mapper\Mapper.csproj" />
     <ProjectReference Include="..\..\5. Common\Common\Common.csproj" />
   </ItemGroup>
 

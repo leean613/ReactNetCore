@@ -1,7 +1,9 @@
-﻿using EntityFrameworkCore.Contexts;
+﻿using AutoMapper;
+using EntityFrameworkCore.Contexts;
 using EntityFrameworkCore.UnitOfWork;
 using FluentValidation.AspNetCore;
 using Infrastructure.Filters;
+using Mapper.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,7 +15,14 @@ namespace Infrastructure.ContainerConfigs
     {
         public static void ConfigureCoreServices(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddMvcCore()
+            services.AddAutoMapper(typeof(UserProfile).Assembly);
+
+            services.AddMvcCore(
+                    options =>
+                    {
+                        options.Filters.Add(typeof(HttpGlobalExceptionFilter));
+                    }
+                )
                 .AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining(typeof(IValidator)));
 
             services.AddDbContext<ReactDbContext>(
