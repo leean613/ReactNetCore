@@ -1,9 +1,6 @@
 ﻿using Entities.React;
 using Entities.ReactConfigurations;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace EntityFrameworkCore.Contexts
 {
@@ -16,7 +13,7 @@ namespace EntityFrameworkCore.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(UserConfiguration).Assembly);
         }
 
         public DbSet<User> Users { get; set; }
