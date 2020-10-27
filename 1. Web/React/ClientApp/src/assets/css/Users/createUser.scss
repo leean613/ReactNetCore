@@ -1,0 +1,17 @@
+.card-user-create {
+  width: 50%;
+}
+
+@media (max-width: 992px) {
+  .card-user-create {
+      width: 100%;
+  }
+}
+
+.lb-messageSuccess {
+  margin-left: 15px !important;
+}
+
+.lb-messageFailed {
+  margin-left: 15px !important;
+}

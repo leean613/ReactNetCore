@@ -31,5 +31,27 @@ namespace Common.Runtime.Security
 
             return userId;
         }
+
+        public static int GetUserRole(this IIdentity identity)
+        {
+            if (identity == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            var userRoleClaim = (identity as ClaimsIdentity)?.Claims.FirstOrDefault(c => c.Type == GlotechClaimTypes.Role);
+            if (string.IsNullOrEmpty(userRoleClaim?.Value))
+            {
+                throw new AuthenticationException();
+            }
+
+            int userRole;
+            if (!int.TryParse(userRoleClaim.Value, out userRole))
+            {
+                throw new AuthenticationException();
+            }
+
+            return userRole;
+        }
     }
 }

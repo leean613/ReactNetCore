@@ -1,0 +1,28 @@
+.react-select {
+    margin-bottom: 20px !important;
+    height: 40px !important;
+}
+
+.react-select__control {
+    border-radius: 4px !important;
+}
+
+.react-select__value-container {
+    color: #66615b !important;
+}
+
+.react-select__single-value {
+    color: #66615b !important;
+}
+
+.react-select__option--is-selected {
+    background: #2c2c2c !important;
+    color: white !important;
+}
+
+.react-select__option {
+    &:hover{
+        background: #acaaaa !important;
+        color: white !important;
+    }
+}

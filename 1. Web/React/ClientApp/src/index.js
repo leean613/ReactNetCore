@@ -1,18 +1,16 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
-const rootElement = document.getElementById('root');
+import "bootstrap/dist/css/bootstrap.css";
+import "./assets/scss/paper-dashboard.scss";
+import "./assets/common/common.css";
+import "perfect-scrollbar/css/perfect-scrollbar.css";
+import App from "./components/App/App";
+
+// import { configureFakeBackend } from './common/Helpers';
+// configureFakeBackend();
 
 ReactDOM.render(
-  <BrowserRouter basename={baseUrl}>
-    <App />
-  </BrowserRouter>,
-  rootElement);
-
-registerServiceWorker();
-
+    <App></App>,
+    document.getElementById("root")
+);

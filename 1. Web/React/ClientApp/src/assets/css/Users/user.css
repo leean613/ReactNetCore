@@ -1,0 +1,54 @@
+.btn-createUser {
+    background-color: #51cbce !important;
+    border-radius: 50px;
+}
+
+.btn-createUser:hover, .btn-createUser:focus, .btn-createUser:active, .btn-createUser.active, .btn-createUser:active:focus, .btn-createUser:active:hover, .btn-createUser.active:focus, .btn-createUser:hover{
+    background-color: #216768 !important;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.search-icon:hover{
+    color: #e2863b;
+}
+
+.input-search {
+    height: 70%;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+tr > .th-username {
+    width: 20%;
+}
+
+tr > .th-registerDate {
+    width: 20%;
+}
+
+tr > .th-adminFlag {
+    width: 20%;
+}
+
+.i-adminFlag {
+    margin-left: 18px;
+}
+
+td {
+    word-break: break-all;
+}
+
+.noneVisible {
+    visibility: hidden;
+}
+
+.btn-lg {
+    padding: 15px 35px !important;
+}

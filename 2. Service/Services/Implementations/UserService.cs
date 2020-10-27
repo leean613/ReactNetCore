@@ -1,12 +1,16 @@
 ﻿using Abstractions.Interfaces;
 using AutoMapper;
 using Common.Exceptions;
+using Common.Helpers;
 using DTOs.React;
+using DTOs.React.User;
+using DTOs.Share;
 using Entities.React;
 using EntityFrameworkCore.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using Services.Implementations.Helpers;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Services.Implementations
@@ -58,6 +62,20 @@ namespace Services.Implementations
                 .FirstOrDefaultAsync(x => x.Id == userId);
 
             return _mapper.Map<UserDto>(userFromDb);
+        }
+
+        public async Task<IPagedResultDto<UserDto>> FilterUsersAsync(PagedResultRequestDto pagedResultRequest, FilterUsersDto filter)
+        {
+            return await GetFilterUsersQuery(filter)
+        }
+
+        private IQueryable<User> GetFilterUsersQuery(FilterUsersDto filter)
+        {
+            return _userRepository
+                .GetAll()
+                .SearchByFields(filter.SearchTerm, x => x.UserName)
+                .OrderBy(x => x.CreateDate)
+                .
         }
     }
 }

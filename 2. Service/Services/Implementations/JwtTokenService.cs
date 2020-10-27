@@ -30,6 +30,7 @@ namespace Services.Implementations
                 UserId = identity.GetUserId(),
                 TokenType = "Bearer",
                 AccessToken = await GenerateEncodedToken(identity),
+                Role = identity.GetUserRole(),
                 ExpiresInSeconds = (int)_jwtOptions.ValidFor.TotalSeconds // TODO: Incorrect for application type
             };
         }

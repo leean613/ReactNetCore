@@ -13,5 +13,7 @@ namespace DTOs.React
         public string AccessToken { get; set; }
 
         public int ExpiresInSeconds { get; set; }
+
+        public int Role { get; set; }
     }
 }
