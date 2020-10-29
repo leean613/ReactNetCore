@@ -40,9 +40,8 @@ function CreateUser(props) {
         try {
             setIsLoading(true);
             var response = await userService.createUser({
-                Staff_Id: values.userCode,
-                Staff_Name: values.userName,
-                Admin_Flag: role
+                userName: values.userName,
+                role: role
             });
             if (!response) {
                 setIsCreateFailed(true);
@@ -60,12 +59,9 @@ function CreateUser(props) {
 
     const formik = useFormik({
         initialValues: {
-            userCode: "",
             userName: ""
         },
         validationSchema: Yup.object({
-            userCode: Yup.string()
-                .required("Please enter user code!"),
             userName: Yup.string()
                 .required('Please enter user name!')
         }),
@@ -87,7 +83,7 @@ function CreateUser(props) {
                 {isCreateFailed && <label className="lb-messageFailed">Create user failed!</label>}
                 <CardBody>
                     <Form onSubmit={formik.handleSubmit}>
-                        <Row>
+                        {/* <Row>
                             <Col md="12">
                                 <FormGroup>
                                     <label>User code</label>
@@ -103,7 +99,7 @@ function CreateUser(props) {
                                     )}
                                 </FormGroup>
                             </Col>
-                        </Row>
+                        </Row> */}
                         <Row>
                             <Col md="12">
                                 <FormGroup>

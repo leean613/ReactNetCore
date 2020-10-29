@@ -1,4 +1,5 @@
-﻿using DTOs.Share;
+﻿using Common.Extentions;
+using DTOs.Share;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace Services.Implementations.Helpers
             var count = await source.CountAsync().ConfigureAwait(false);
 
             var items = source
-                .PageBy(pageIndex * pageSize, pageSize)
+                .PageBy((pageIndex - 1) * pageSize, pageSize)
                 .MakeQueryToDatabase();
 
             return new PagedResultDto<TEntityDto>

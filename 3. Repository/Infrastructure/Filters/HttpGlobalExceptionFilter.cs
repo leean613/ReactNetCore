@@ -46,9 +46,9 @@ namespace Infrastructure.Filters
                 //TODO:Mapping if (exception is NotFoundExe) code = HttpStatusCode.NotFound;
                 switch (exception)
                 {
-                    //case EntityNotFoundException _:
-                    //    code = HttpStatusCode.NotFound;
-                    //    break;
+                    case EntityNotFoundException _:
+                        code = HttpStatusCode.NotFound;
+                        break;
                     case ArgumentNullException _:
                         code = HttpStatusCode.BadRequest;
                         break;

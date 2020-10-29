@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom'
+import { format, toDate } from 'date-fns'
 // reactstrap components
 import {
     Card,
@@ -32,8 +33,9 @@ const Tables = (props) => {
         try {
             setIsLoading(true);
             var { data } = await userService.getUsersByPage(page, limit, searchTerm.trim());
-            setUsers(data);
-            setTotal(data[0] ? data[0].staff_Total : 0);
+            setUsers(data.result.items);
+            // setTotal(data.result[0] ? data.result[0].staff_Total : 0);
+            setTotal(data.result.totalCount);
             setIsLoading(false);
         } catch (error) {
             console.log('Fail request get list user!');
@@ -54,7 +56,7 @@ const Tables = (props) => {
                     confirmBtnText="Yes, delete it!"
                     confirmBtnBsStyle="danger"
                     title="Are you sure?"
-                    onConfirm={() => deleteUser(user.staff_Id)}
+                    onConfirm={() => deleteUser(user.id)}
                     onCancel={() => hideDeleteAlert()}
                     focusCancelBtn
                 >
@@ -138,15 +140,15 @@ const Tables = (props) => {
                             <tbody>
                                 {users.map((user, key) => {
                                     return (
-                                        <tr key={user.staff_Id}>
-                                            <td>{user.staff_Name}</td>
-                                            <td>{user.register_Date}</td>
+                                        <tr key={user.id}>
+                                            <td>{user.userName}</td>
+                                            <td>{format(new Date(user.createDate), "dd/MM/yyyy")}</td>
                                             <td className="td-adminFlag">
-                                                <i className={`fas fa-check i-adminFlag ${user.admin_Flag === 1 ? "" : "noneVisible"}`}></i>
+                                                <i className={`fas fa-check i-adminFlag ${user.role === 1 ? "" : "noneVisible"}`}></i>
                                             </td>
                                             <td>
                                                 <Link to={''}>
-                                                    <Button tag={Link} to={`/admin/users/${user.staff_Id}`} color="primary" outline size="xs" className="default mr-2">
+                                                    <Button tag={Link} to={`/admin/users/${user.id}`} color="primary" outline size="xs" className="default mr-2">
                                                         Detail
                                                     </Button>
                                                 </Link>

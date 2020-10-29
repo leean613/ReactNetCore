@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using DTOs.React;
+using DTOs.React.User;
 using Mapper.Utils;
 
 namespace Mapper.User
@@ -10,6 +10,9 @@ namespace Mapper.User
        {
             CreateMap<Entities.React.User, UserDto>()
                 .IgnoreAllNonExisting();
-       }
+
+            CreateMap<UpdateUserDto, Entities.React.User>()
+                .IgnoreAllNonExisting();
+        }
     }
 }

@@ -66,16 +66,31 @@ namespace Services.Implementations
 
         public async Task<IPagedResultDto<UserDto>> FilterUsersAsync(PagedResultRequestDto pagedResultRequest, FilterUsersDto filter)
         {
-            return await GetFilterUsersQuery(filter)
-        }
-
-        private IQueryable<User> GetFilterUsersQuery(FilterUsersDto filter)
-        {
-            return _userRepository
+            return await _userRepository
                 .GetAll()
                 .SearchByFields(filter.SearchTerm, x => x.UserName)
                 .OrderBy(x => x.CreateDate)
-                .
+                .GetPagedResultAsync(pagedResultRequest.Page, pagedResultRequest.PageSize, x => _mapper.Map<UserDto>(x));
+        }
+
+        public async Task<UserDto> UpdateUserAsync(UpdateUserDto dto)
+        {
+            var userFromDb = _userRepository
+                .GetAll()
+                .FirstOrDefault(x => x.Id == dto.Id);
+
+            var user = _mapper.Map<User>(dto);
+
+            await _userRepository.UpdateAsync(user);
+
+            await _unitOfWork.CompleteAsync();
+
+            return _mapper.Map<UserDto>();
+        }
+
+        public async Task DeleteUserAsync(Guid id)
+        {
+            await _userRepository.DeleteAsync(id);
         }
     }
 }

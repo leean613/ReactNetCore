@@ -28,7 +28,7 @@ namespace React.Controllers
         /// <summary>
         /// Tạo mới người dùng
         /// </summary>
-        [HttpPost("create")]
+        [HttpPost]
         [ModelValidationFilter]
         public async Task<IActionResult> Create([FromBody] CreateUserDto dto)
         {
@@ -36,6 +36,11 @@ namespace React.Controllers
             return Success(result);
         }
 
+        /// <summary>
+        /// Danh sách người dùng
+        /// </summary>
+        [HttpGet("{page:int}/{pageSize:int}")]
+        [ModelValidationFilter]
         public async Task<IActionResult> Filter(
             [FromRoute] int page,
             [FromRoute] int pageSize,
@@ -49,6 +54,28 @@ namespace React.Controllers
                 });
 
             return Success(result);
+        }
+
+        /// <summary>
+        /// Xóa người dùng
+        /// </summary>
+        [HttpGet("{id:guid}")]
+        [ModelValidationFilter]
+        public async Task<IActionResult> Get([FromRoute] Guid id)
+        {
+            var result = await _userService.GetUserAsync(id);
+            return Success(result);
+        }
+
+        /// <summary>
+        /// Xóa người dùng
+        /// </summary>
+        [HttpDelete("{id:guid}")]
+        [ModelValidationFilter]
+        public async Task<IActionResult> Delete([FromRoute] Guid id)
+        {
+            await _userService.DeleteUserAsync(id);
+            return Success();
         }
     }
 }

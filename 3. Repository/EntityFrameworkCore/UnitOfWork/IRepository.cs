@@ -15,5 +15,9 @@ namespace EntityFrameworkCore.UnitOfWork
         TEntity GetFirstOrDefault(Expression<Func<TEntity, bool>> predicate);
 
         Task<TEntity> InsertAsync(TEntity entity);
+
+        Task DeleteAsync(Guid id);
+
+        Task<TEntity> UpdateAsync(TEntity entity);
     }
 }

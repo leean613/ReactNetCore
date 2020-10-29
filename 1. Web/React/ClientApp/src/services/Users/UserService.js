@@ -3,7 +3,7 @@ import { callAuthorizationApi } from "../../utils/apiCaller";
 const getUsersByPage = async (page, pageSize, searchTerm) => {
     try {
         var response = await callAuthorizationApi(
-            `api/Staff/GetStaffsList/${page}/${pageSize}?searchTerm=${searchTerm}`,
+            `api/glotech/user/${page}/${pageSize}?searchTerm=${searchTerm}`,
             "GET",
             null
         );
@@ -17,7 +17,7 @@ const getUsersByPage = async (page, pageSize, searchTerm) => {
 
 const createUser = async (user) => {
     try {
-        var response = await callAuthorizationApi(`api/Staff/Create`, "POST", user);
+        var response = await callAuthorizationApi(`api/glotech/user`, "POST", user);
         if (response) {
             return response;
         }
@@ -28,7 +28,7 @@ const createUser = async (user) => {
 
 const getUserByID = async (userID) => {
     try {
-        var response = await callAuthorizationApi(`api/Staff/GetStaff/${userID}`, "GET", null);
+        var response = await callAuthorizationApi(`api/glotech/user/${userID}`, "GET", null);
         if (response) {
             return response;
         }
@@ -50,7 +50,7 @@ const updateUser = async (user) => {
 
 const deleteUser = async (userID) => {
     try {
-        var response = await callAuthorizationApi(`api/Staff/Delete/${userID}`, "POST", null);
+        var response = await callAuthorizationApi(`api/glotech/user/${userID}`, "DELETE", null);
         if (response) {
             return response;
         }
