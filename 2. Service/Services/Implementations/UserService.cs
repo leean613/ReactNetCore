@@ -79,18 +79,19 @@ namespace Services.Implementations
                 .GetAll()
                 .FirstOrDefault(x => x.Id == dto.Id);
 
-            var user = _mapper.Map<User>(dto);
+            var userToUpdate = _mapper.Map(dto, userFromDb);
 
-            await _userRepository.UpdateAsync(user);
+            await _userRepository.UpdateAsync(userToUpdate);
 
             await _unitOfWork.CompleteAsync();
 
-            return _mapper.Map<UserDto>();
+            return await GetUserAsync(userToUpdate.Id);
         }
 
         public async Task DeleteUserAsync(Guid id)
         {
             await _userRepository.DeleteAsync(id);
+            await _unitOfWork.CompleteAsync();
         }
     }
 }

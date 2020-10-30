@@ -16,6 +16,8 @@ namespace Abstractions.Interfaces
 
         Task<UserDto> GetUserAsync(Guid id);
 
+        Task<UserDto> UpdateUserAsync(UpdateUserDto dto);
+
         Task DeleteUserAsync(Guid id);
     }
 }

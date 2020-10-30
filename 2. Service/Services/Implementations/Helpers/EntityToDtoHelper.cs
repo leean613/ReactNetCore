@@ -1,8 +1,5 @@
-﻿using DTOs.React;
+﻿using DTOs.React.User;
 using Entities.React;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Services.Implementations.Helpers
 {
