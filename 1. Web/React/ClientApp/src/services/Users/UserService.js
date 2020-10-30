@@ -39,7 +39,7 @@ const getUserByID = async (userID) => {
 
 const updateUser = async (user) => {
     try {
-        var response = await callAuthorizationApi(`api/Staff/Update`, "POST", user);
+        var response = await callAuthorizationApi(`api/glotech/user`, "PUT", user);
         if (response) {
             return response;
         }

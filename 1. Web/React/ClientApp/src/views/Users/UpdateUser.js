@@ -29,7 +29,6 @@ function UpdateUser(props) {
     const [isLoading, setIsLoading] = useState(false);
     const [isCreateSuccess, setIsCreateSuccess] = useState(false);
     const [isCreateFailed, setIsCreateFailed] = useState(false);
-    const [userCode, setUserCode] = useState();
     const [userName, setUserName] = useState();
 
     useEffect(() => {
@@ -37,9 +36,8 @@ function UpdateUser(props) {
             try {
                 setIsLoading(true);
                 var { data } = await userService.getUserByID(id);
-                setUserCode(data.staff_Id);
-                setUserName(data.staff_Name);
-                setRole(data.admin_Flag);
+                setUserName(data.result.userName);
+                setRole(data.result.role);
                 setIsLoading(false);
             } catch (error) {
                 setIsLoading(false);
@@ -56,8 +54,9 @@ function UpdateUser(props) {
         try {
             setIsLoading(true);
             var response = await userService.updateUser({
-                Staff_Id: userCode,
-                Admin_Flag: role
+                id: id,
+                userName: userName,
+                role: role
             });
             if (!response) {
                 setIsCreateFailed(true);
@@ -75,7 +74,6 @@ function UpdateUser(props) {
 
     const formik = useFormik({
         initialValues: {
-            userCode: "",
             userName: ""
         },
         onSubmit: values => {
@@ -96,21 +94,6 @@ function UpdateUser(props) {
                 {isCreateFailed && <label className="lb-messageFailed">Update user failed!</label>}
                 <CardBody>
                     <Form onSubmit={formik.handleSubmit}>
-                        <Row>
-                            <Col md="12">
-                                <FormGroup>
-                                    <label>User code</label>
-                                    <Input
-                                        placeholder="Email"
-                                        type="text"
-                                        name="userCode"
-                                        value={userCode}
-                                        onChange={formik.handleChange}
-                                        disabled
-                                    />
-                                </FormGroup>
-                            </Col>
-                        </Row>
                         <Row>
                             <Col md="12">
                                 <FormGroup>

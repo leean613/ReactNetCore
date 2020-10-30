@@ -57,13 +57,24 @@ namespace React.Controllers
         }
 
         /// <summary>
-        /// Xóa người dùng
+        /// Thông tin người dùng
         /// </summary>
         [HttpGet("{id:guid}")]
         [ModelValidationFilter]
         public async Task<IActionResult> Get([FromRoute] Guid id)
         {
             var result = await _userService.GetUserAsync(id);
+            return Success(result);
+        }
+
+        /// <summary>
+        /// Chỉnh sửa người dùng
+        /// </summary>
+        [HttpPut]
+        [ModelValidationFilter]
+        public async Task<IActionResult> Edit([FromBody] UpdateUserDto dto)
+        {
+            var result = await _userService.UpdateUserAsync(dto);
             return Success(result);
         }
 
