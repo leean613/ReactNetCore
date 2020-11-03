@@ -3,6 +3,7 @@ using Common.Extentions;
 using Infrastructure.ApiResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -13,13 +14,21 @@ namespace Infrastructure.Filters
 {
     public class HttpGlobalExceptionFilter : IExceptionFilter
     {
-        public HttpGlobalExceptionFilter()
+        private readonly ILogger<HttpGlobalExceptionFilter> _logger;
+
+        public HttpGlobalExceptionFilter(ILogger<HttpGlobalExceptionFilter> logger)
         {
+            _logger = logger;
         }
 
         public void OnException(ExceptionContext context)
         {
             var exception = context.Exception;
+
+            _logger.LogError(
+                new EventId(context.Exception.HResult),
+                context.Exception,
+                context.Exception.Message);
 
             ApiErrorResult apiErrorResult;
 
