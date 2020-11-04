@@ -10,6 +10,7 @@ using System;
 using System.Threading.Tasks;
 using Swashbuckle.AspNetCore.Annotations;
 using Microsoft.AspNetCore.Http;
+using Hangfire;
 
 namespace React.Controllers
 {
@@ -45,6 +46,7 @@ namespace React.Controllers
 
                 case LoginResultType.Success:
                     var jwtToken = await _tokenService.RequestTokenAsync(loginResult.Identity);
+                    //BackgroundJob.Schedule(() => _loginService.SendMail(), TimeSpan.FromMinutes(1));
                     return Success(jwtToken);
 
                 default:

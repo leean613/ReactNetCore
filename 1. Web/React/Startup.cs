@@ -1,3 +1,5 @@
+using Hangfire;
+using Hangfire.PostgreSql;
 using Infrastructure.ContainerConfigs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -39,6 +41,11 @@ namespace React
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/build";
+            });
+
+            services.AddHangfire(config =>
+            {
+                config.UsePostgreSqlStorage(Configuration.GetConnectionString("ReactConnectionString"));
             });
 
             services.AddSwaggerGen(
@@ -87,12 +94,16 @@ namespace React
 
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.DocumentTitle = "Glotech React Document";
                 c.SwaggerEndpoint("/swagger/v5/swagger.json", "My API V5");
             });
+
+            app.UseHangfireDashboard();
+            app.UseHangfireServer();
 
             app.UseRouting();
 

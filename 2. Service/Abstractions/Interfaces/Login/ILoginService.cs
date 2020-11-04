@@ -9,5 +9,7 @@ namespace Abstractions.Interfaces
     public interface ILoginService
     {
         Task<LoginResult> LoginAsync(LoginDto dto);
+
+        Task SendMail();
     }
 }

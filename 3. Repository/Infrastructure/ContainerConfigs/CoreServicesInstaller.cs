@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Common.Configurations;
 using EntityFrameworkCore.Contexts;
 using EntityFrameworkCore.UnitOfWork;
 using FluentValidation.AspNetCore;
@@ -24,6 +25,8 @@ namespace Infrastructure.ContainerConfigs
                     }
                 )
                 .AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining(typeof(IValidator)));
+
+            services.Configure<SmtpConfig>(configuration.GetSection(nameof(SmtpConfig)));
 
             services.AddDbContext<ReactDbContext>(
                 option =>

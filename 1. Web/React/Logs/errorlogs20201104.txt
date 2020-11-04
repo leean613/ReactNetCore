@@ -1,0 +1,174 @@
+2020-11-04 09:27:11.917 +07:00 [ERR] Browserslist: caniuse-lite is outdated. Please run:
+
+2020-11-04 09:45:35.812 +07:00 [ERR] Browserslist: caniuse-lite is outdated. Please run:
+
+2020-11-04 14:56:58.356 +07:00 [ERR] Browserslist: caniuse-lite is outdated. Please run:
+
+2020-11-04 15:02:35.140 +07:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:18.
+Common.Exceptions.SendEmailException: 
+Exception Type: AuthenticationException
+Message: 535: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials m129sm1467355pfd.177 - gsmtp
+Source: MailKit
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 121
+
+Data:
+
+Inner exception:
+
+Exception Type: SmtpCommandException
+Message: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials m129sm1467355pfd.177 - gsmtp
+Source: 
+Stack Trace: 
+
+Data:
+
+
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 129
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(String senderName, String senderEmail, String recipientName, String recipientEmail, String subject, String body, SmtpConfig config, FileDescription[] attachments) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 68
+   at Services.Implementations.Mail.SendMailService.SendMails(SendEmailInput inputDto) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 43
+   at Services.Implementations.LoginService.SendMail() in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Login\LoginService.cs:line 86
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2020-11-04 15:03:03.649 +07:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 2 of 10 will be performed in 00:01:10.
+Common.Exceptions.SendEmailException: 
+Exception Type: AuthenticationException
+Message: 535: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials n64sm1431177pfn.134 - gsmtp
+Source: MailKit
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 121
+
+Data:
+
+Inner exception:
+
+Exception Type: SmtpCommandException
+Message: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials n64sm1431177pfn.134 - gsmtp
+Source: 
+Stack Trace: 
+
+Data:
+
+
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 129
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(String senderName, String senderEmail, String recipientName, String recipientEmail, String subject, String body, SmtpConfig config, FileDescription[] attachments) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 68
+   at Services.Implementations.Mail.SendMailService.SendMails(SendEmailInput inputDto) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 43
+   at Services.Implementations.LoginService.SendMail() in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Login\LoginService.cs:line 86
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2020-11-04 15:04:40.997 +07:00 [ERR] Browserslist: caniuse-lite is outdated. Please run:
+
+2020-11-04 15:10:11.396 +07:00 [ERR] Browserslist: caniuse-lite is outdated. Please run:
+
+2020-11-04 15:12:23.399 +07:00 [WRN] Failed to process the job '3': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:23.
+Common.Exceptions.SendEmailException: 
+Exception Type: AuthenticationException
+Message: 535: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials x18sm1552632pfj.90 - gsmtp
+Source: MailKit
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 121
+
+Data:
+
+Inner exception:
+
+Exception Type: SmtpCommandException
+Message: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials x18sm1552632pfj.90 - gsmtp
+Source: 
+Stack Trace: 
+
+Data:
+
+
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 129
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(String senderName, String senderEmail, String recipientName, String recipientEmail, String subject, String body, SmtpConfig config, FileDescription[] attachments) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 68
+   at Services.Implementations.Mail.SendMailService.SendMails(SendEmailInput inputDto) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 43
+   at Services.Implementations.LoginService.SendMail() in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Login\LoginService.cs:line 86
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2020-11-04 15:13:00.012 +07:00 [WRN] Failed to process the job '3': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:50.
+Common.Exceptions.SendEmailException: 
+Exception Type: AuthenticationException
+Message: 535: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials r8sm1365213pga.33 - gsmtp
+Source: MailKit
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 121
+
+Data:
+
+Inner exception:
+
+Exception Type: SmtpCommandException
+Message: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials r8sm1365213pga.33 - gsmtp
+Source: 
+Stack Trace: 
+
+Data:
+
+
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 129
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(String senderName, String senderEmail, String recipientName, String recipientEmail, String subject, String body, SmtpConfig config, FileDescription[] attachments) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 68
+   at Services.Implementations.Mail.SendMailService.SendMails(SendEmailInput inputDto) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 43
+   at Services.Implementations.LoginService.SendMail() in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Login\LoginService.cs:line 86
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2020-11-04 15:30:16.277 +07:00 [ERR] Browserslist: caniuse-lite is outdated. Please run:
+
+2020-11-04 15:32:22.961 +07:00 [WRN] Failed to process the job '5': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:34.
+Common.Exceptions.SendEmailException: 
+Exception Type: AuthenticationException
+Message: 535: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials e3sm1476293pgm.93 - gsmtp
+Source: MailKit
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 121
+
+Data:
+
+Inner exception:
+
+Exception Type: SmtpCommandException
+Message: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials e3sm1476293pgm.93 - gsmtp
+Source: 
+Stack Trace: 
+
+Data:
+
+
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 129
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(String senderName, String senderEmail, String recipientName, String recipientEmail, String subject, String body, SmtpConfig config, FileDescription[] attachments) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 68
+   at Services.Implementations.Mail.SendMailService.SendMails(SendEmailInput inputDto) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 43
+   at Services.Implementations.LoginService.SendMail() in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Login\LoginService.cs:line 86
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2020-11-04 15:33:26.213 +07:00 [WRN] Failed to process the job '5': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:46.
+Common.Exceptions.SendEmailException: 
+Exception Type: AuthenticationException
+Message: 535: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials gf17sm1452222pjb.15 - gsmtp
+Source: MailKit
+Stack Trace:    at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, Boolean doAsync, CancellationToken cancellationToken)
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 121
+
+Data:
+
+Inner exception:
+
+Exception Type: SmtpCommandException
+Message: 5.7.8 Username and Password not accepted. Learn more at
+5.7.8  https://support.google.com/mail/?p=BadCredentials gf17sm1452222pjb.15 - gsmtp
+Source: 
+Stack Trace: 
+
+Data:
+
+
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(MailboxAddress sender, MailboxAddress[] recipients, String subject, String body, SmtpConfig config, FileDescription[] attachmentFiles) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 129
+   at Services.Implementations.Mail.SendMailService.SendEmailAsync(String senderName, String senderEmail, String recipientName, String recipientEmail, String subject, String body, SmtpConfig config, FileDescription[] attachments) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 68
+   at Services.Implementations.Mail.SendMailService.SendMails(SendEmailInput inputDto) in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Mail\SendMailService.cs:line 43
+   at Services.Implementations.LoginService.SendMail() in E:\Glotech\ReactNetCore\2. Service\Services\Implementations\Login\LoginService.cs:line 86
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
