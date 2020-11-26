@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>React</name>
+    </assembly>
+    <members>
+        <member name="M:React.Controllers.LoginController.Login(DTOs.React.LoginDto)">
+            <summary>
+            Đăng nhập
+            </summary>
+        </member>
+        <member name="M:React.Controllers.UserController.Create(DTOs.React.CreateUserDto)">
+            <summary>
+            Tạo mới người dùng
+            </summary>
+        </member>
+        <member name="M:React.Controllers.UserController.Filter(System.Int32,System.Int32,System.String)">
+            <summary>
+            Danh sách người dùng
+            </summary>
+        </member>
+        <member name="M:React.Controllers.UserController.Get(System.Guid)">
+            <summary>
+            Thông tin người dùng
+            </summary>
+        </member>
+        <member name="M:React.Controllers.UserController.Edit(DTOs.React.User.UpdateUserDto)">
+            <summary>
+            Chỉnh sửa người dùng
+            </summary>
+        </member>
+        <member name="M:React.Controllers.UserController.Delete(System.Guid)">
+            <summary>
+            Xóa người dùng
+            </summary>
+        </member>
+    </members>
+</doc>

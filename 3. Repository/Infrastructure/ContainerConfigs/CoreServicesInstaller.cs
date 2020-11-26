@@ -16,6 +16,18 @@ namespace Infrastructure.ContainerConfigs
     {
         public static void ConfigureCoreServices(IServiceCollection services, IConfiguration configuration)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder =>
+                    {
+                        builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                    });
+            });
+
             services.AddAutoMapper(typeof(UserProfile).Assembly);
 
             services.AddMvcCore(
@@ -40,7 +52,6 @@ namespace Infrastructure.ContainerConfigs
 
             services.AddScoped<ModelValidationFilterAttribute>();
             services.AddMemoryCache();
-            //services.AddCors();
         }
     }
 }

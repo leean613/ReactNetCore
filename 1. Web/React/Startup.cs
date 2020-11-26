@@ -3,8 +3,6 @@ using Hangfire.PostgreSql;
 using Infrastructure.ContainerConfigs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -36,12 +34,6 @@ namespace React
                 .AddControllersWithViews()
                 .AddNewtonsoftJson(options =>
                     options.SerializerSettings.Converters.Add(new StringEnumConverter()));
-
-            // In production, the React files will be served from this directory
-            services.AddSpaStaticFiles(configuration =>
-            {
-                configuration.RootPath = "ClientApp/build";
-            });
 
             services.AddHangfire(config =>
             {
@@ -90,16 +82,17 @@ namespace React
                 app.UseHsts();
             }
 
+            app.UseCors("AllowAll");
+
             app.UseAuthentication();
 
             app.UseStaticFiles();
-            app.UseSpaStaticFiles();
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.DocumentTitle = "Glotech React Document";
-                c.SwaggerEndpoint("/swagger/v5/swagger.json", "My API V5");
+                c.SwaggerEndpoint("v5/swagger.json", "My API V5");
             });
 
             app.UseHangfireDashboard();
@@ -112,16 +105,6 @@ namespace React
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-            });
-
-            app.UseSpa(spa =>
-            {
-                spa.Options.SourcePath = "ClientApp";
-
-                if (env.IsDevelopment())
-                {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
-                }
             });
         }
     }
