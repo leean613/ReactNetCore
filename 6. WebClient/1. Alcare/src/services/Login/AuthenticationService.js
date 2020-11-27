@@ -1,18 +1,8 @@
 import { callApi } from "../../utils/apiCaller";
 
 const login = async (username, password) => {
-    try {
-        const params = { username: username, password: password };
-        var response = await callApi("api/glotech/login", "POST", params);
-        console.log(response)
-        if (response) {
-            localStorage.setItem('currentUser', JSON.stringify(response.data.result));
-            localStorage.setItem('token', response.data.result.accessToken);
-            return response;
-        }
-    } catch (error) {
-        console.log(error);
-    }
+    const params = { username: username, password: password };
+    return await callApi("api/glotech/login", "POST", params);
 }
 
 const logout = () => {

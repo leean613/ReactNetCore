@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import '../../assets/css/Login/login.css';
 import { authenticationService } from "../../services/Login/AuthenticationService";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { RingLoader } from "react-spinners";
+import { GlobalContext } from '../../context/Provider';
+import login from '../../context/actions/auth/login';
 
 function Login(props) {
 
@@ -11,22 +13,23 @@ function Login(props) {
         props.history.push('/admin/dashboard');
     }
 
-    const [loginFailed, setloginFailed] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
+    const {
+        authState: {
+            auth: {
+                isLoading,
+                data,
+                isFailed,
+                isSuccess
+            }
+        },
+        authDispatch
+    } = useContext(GlobalContext);
 
     const handleOnsubmit = async (values) => {
-        setIsLoading(true);
-        try {
-            var response = await authenticationService.login(values.username, values.password);
-            if (response) {
-                props.history.push("/admin/dashboard");
-            } else {
-                setloginFailed(true);
-            }
-        } catch (error) {
-            console.log(error);
-        };
-        setIsLoading(false);
+        await login(values.username, values.password)(authDispatch);
+        if (isSuccess === true) {
+            props.history.push("/admin/dashboard");
+        }
     }
 
     const formik = useFormik({
@@ -59,8 +62,8 @@ function Login(props) {
                     <form onSubmit={formik.handleSubmit}>
                         <h3>Sign In</h3>
 
-                        {loginFailed &&
-                            <label className="lb-loginFailed">User name or password is incorrect!</label>
+                        {isFailed &&
+                            <label className="lb-loginFailed">{data.errorMessage}</label>
                         }
 
                         <div className="form-group">

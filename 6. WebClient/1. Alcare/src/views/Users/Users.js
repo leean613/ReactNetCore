@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom'
-import { format, toDate } from 'date-fns'
+import { format } from 'date-fns'
 // reactstrap components
 import {
     Card,
@@ -33,7 +33,6 @@ const Tables = (props) => {
         try {
             setIsLoading(true);
             var { data } = await userService.getUsersByPage(page, limit, searchTerm.trim());
-            console.log(data)
             setUsers(data.result.items);
             // setTotal(data.result[0] ? data.result[0].staff_Total : 0);
             setTotal(data.result.totalCount);

@@ -41,7 +41,7 @@ namespace Common.Runtime.Security
         /// <summary>
         /// Set the timespan the token will be valid for (default is 120 min)
         /// </summary>
-        public TimeSpan ValidFor { get; set; } = TimeSpan.FromDays(30);
+        public TimeSpan ValidFor => TimeSpan.FromHours(WebExpirationInHours);
 
         public int WebExpirationInHours { get; set; }
 
