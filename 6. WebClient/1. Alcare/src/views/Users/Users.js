@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom'
 import { format } from 'date-fns'
 // reactstrap components
@@ -17,6 +17,7 @@ import "./../../assets/css/Users/user.css";
 import { userService } from "./../../services/Users/UserService.js";
 import SweetAlert from 'react-bootstrap-sweetalert';
 import { RingLoader } from "react-spinners";
+import useCurrent from "../../utils/useCurrent.js";
 
 const Tables = (props) => {
 
@@ -27,24 +28,30 @@ const Tables = (props) => {
     const [searchTerm, setSearchTerm] = useState('')
     const [deleteAlert, setDeleteAlert] = useState(null)
     const [isLoading, setIsLoading] = useState(false);
-    var searchText = "";
+    const searchText = useRef("");
+    const isCurrent = useCurrent();
 
     const fetch = useCallback(async () => {
         try {
             setIsLoading(true);
             var { data } = await userService.getUsersByPage(page, limit, searchTerm.trim());
-            setUsers(data.result.items);
-            // setTotal(data.result[0] ? data.result[0].staff_Total : 0);
-            setTotal(data.result.totalCount);
-            setIsLoading(false);
+            if (isCurrent.current === true) {
+                setUsers(data.result.items);
+                // setTotal(data.result[0] ? data.result[0].staff_Total : 0);
+                setTotal(data.result.totalCount);
+                setIsLoading(false);
+            }
+
         } catch (error) {
-            console.log('Fail request get list user!');
-            setIsLoading(false);
+            if (isCurrent.current === true) {
+                console.log('Fail request get list user!');
+                setIsLoading(false);
+            }
         }
     }, [page, limit, searchTerm])
 
     useEffect(() => {
-        fetch()
+        fetch();
     }, [fetch])
 
     const toggleDeleteUser = (user) => {
@@ -83,11 +90,11 @@ const Tables = (props) => {
     }
 
     const onSearch = () => {
-        setSearchTerm(searchText);
+        setSearchTerm(searchText.current);
     }
 
     const handleOnChangeSearch = (event) => {
-        searchText = event.target.value;
+        searchText.current = event.target.value;
     }
 
     const handleOnKeyPressSearch = (event) => {
