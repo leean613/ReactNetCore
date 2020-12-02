@@ -1,0 +1,247 @@
+2020-12-02 14:46:53.343 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 14:48:00.744 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 14:52:37.803 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 15:45:00.794 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 15:45:56.040 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 15:46:58.352 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 15:48:33.641 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 15:48:55.252 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 15:50:43.029 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 15:52:07.822 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 15:53:02.327 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 16:00:49.828 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 16:01:40.980 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 16:20:35.736 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 16:21:21.086 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 16:21:48.105 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 16:21:59.559 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 16:22:28.104 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-12-02 16:28:23.680 +07:00 [ERR] Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+Common.Exceptions.BusinessException: Tên đăng nhập của bạn trùng với tên đăng nhập của nhân viên khác!
+   at Services.Implementations.UserService.CheckDuplicateUser(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 56
+   at Services.Implementations.UserService.CreateUserAsync(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\2. Service\Services\Implementations\User\UserService.cs:line 33
+   at React.Controllers.UserController.Create(CreateUserDto dto) in D:\PROJECT_GIT\GlotechJP\training\react\reactNetCore\1. Web\React\Controllers\UserController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
