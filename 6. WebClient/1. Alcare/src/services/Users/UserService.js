@@ -22,7 +22,10 @@ const createUser = async (user) => {
     if (response) {
       return response;
     }
-  } catch (error) {}
+  } catch (error) {
+    let errorCondition = error.data.errorMessage;
+    return errorCondition;
+  }
 };
 
 const getUserByID = async (userID) => {

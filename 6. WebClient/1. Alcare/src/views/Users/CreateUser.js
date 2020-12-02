@@ -44,7 +44,7 @@ function CreateUser(props) {
         role: role,
       });
 
-      if (!response) {
+      if (response.success == "false") {
         setIsCreateFailed(true);
         setIsCreateSuccess(false);
       } else {
